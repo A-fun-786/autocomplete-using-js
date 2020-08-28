@@ -1,3 +1,4 @@
+//this is countries autocomplete javascript code change it according to your need
 function getvalue() {
     var x = document.getElementById("input").value;
     document.getElementById("demo").innerHTML = "you presssed "+str;   
@@ -5,12 +6,13 @@ function getvalue() {
     var input = document.getElementById("input");
     input.focus();
     var str = "";
+//change this countries array according to need
     var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola",
     "Bahamas","Bahrain","Bangladesh","Barbados","Bavaria*","Belarus",'Belgium',
     'Gabon','Gambia', 'Georgia', 'Germany','Ghana','Iceland',
     'India','Indonesia','Iran','Iraq'];
      var match = [];
-    var cur = 0;
+    var cursor = 0;
     input.addEventListener("keydown",event=>{
 
         //input for country name
@@ -70,12 +72,10 @@ function getvalue() {
             ul.appendChild(li);
             li.style.listStyle = "none";
             if (i==cur) {
-                li.style.backgroundColor = "#bdb7b7"
+                li.style.backgroundColor = "#bdb7b7";//active list 
             }
         }
-        if (ul.hasChildNodes()) {
-            ul.style.border = "0.5px solid #bdb7b7"
-        }
+       
     }
     function blurList() {
         var ul = document.getElementById("list");
